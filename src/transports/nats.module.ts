@@ -14,7 +14,6 @@ import { NATS_SERVICE, envs } from 'src/config';
       },
     ]),
   ],
-
   exports: [
     ClientsModule.register([
       {

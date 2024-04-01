@@ -21,22 +21,12 @@ export class ProductsController {
 
   @Post()
   createProduct(@Body() createProduct: CreateProductDto) {
-    return this.client.send({ cmd: 'create_product' }, createProduct).pipe(
-      catchError(err => {
-        throw new RpcException(err);
-      }),
-    );
+    return this.client.send({ cmd: 'create_product' }, createProduct);
   }
 
   @Get()
   findAllProducts(@Query() paginationDto: PaginationDto): Observable<any> {
-    return this.client
-      .send({ cmd: 'find_all_products' }, { ...paginationDto })
-      .pipe(
-        catchError(err => {
-          throw new RpcException(err);
-        }),
-      );
+    return this.client.send({ cmd: 'find_all_products' }, { ...paginationDto });
   }
 
   @Get(':id')

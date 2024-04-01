@@ -1,8 +1,8 @@
 {
-  "name": "client-gateway",
-  "version": "0.0.1",
+  "name": "client_gateway",
+  "version": "0.0.2",
   "description": "",
-  "author": "",
+  "author": "Juan Debandi",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
