@@ -10,7 +10,7 @@ import {
   Patch,
 } from '@nestjs/common';
 import { ClientProxy, RpcException } from '@nestjs/microservices';
-import { firstValueFrom } from 'rxjs';
+import { catchError, firstValueFrom } from 'rxjs';
 import { NATS_SERVICE } from 'src/config';
 import { OrderPaginationDto, CreateOrderDto, StatusDto } from './dto';
 import { PaginationDto } from 'src/common';
@@ -21,7 +21,11 @@ export class OrdersController {
 
   @Post()
   create(@Body() createOrderDto: CreateOrderDto) {
-    return this.client.send('create_order', createOrderDto);
+    return this.client.send('create_order', createOrderDto).pipe(
+      catchError(err => {
+        throw new RpcException(err);
+      }),
+    );
   }
 
   @Get()
