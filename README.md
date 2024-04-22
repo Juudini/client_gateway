@@ -4,21 +4,19 @@
 
 # Client Gateway
 
-<!-- ## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. -->
+![Finished](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
 ## Installation
 
 ```bash
 # clone this repository
-$ git clone https://github.com/Microservices-Nest/client_gateway.git
+$ git clone https://github.com/Juudini/client_gateway
 
 # move to project directory
 $ cd client_gateway
 
 # install dependencies
-$ pnpm install
+$ npm install
 ```
 
 ## Running the app as Dev mode
@@ -28,7 +26,7 @@ $ pnpm install
 $ docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
 
 # watch mode
-$ pnpm run start:dev
+$ npm run start:dev
 
 ```
 

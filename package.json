@@ -5,6 +5,9 @@
   "author": "Juan Debandi",
   "private": true,
   "license": "UNLICENSED",
+  "repository": {
+    "url": "https://github.com/Juudini/client_gateway"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
